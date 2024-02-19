@@ -1,10 +1,10 @@
 //No se puede crear un objeto de una clase abstracta
 public abstract class Electrodomesticos {
-    private String tipoelectrodomestico;
-    private String marca;
-    private float potencia;
+     String tipoelectrodomestico;
+     String marca;
+     int potencia;
 
-    public Electrodomesticos(String tipoelectrodomestico, String marca, float potencia) {
+    public Electrodomesticos(String tipoelectrodomestico, String marca, int potencia) {
         this.tipoelectrodomestico = tipoelectrodomestico;
         this.marca = marca;
         this.potencia = potencia;
@@ -15,9 +15,11 @@ public abstract class Electrodomesticos {
 
     public abstract double getConsumo (int horas); //Solo se define, no tiene codigo.
 
-    public abstract double getCosteConsumo(int horas, double costeHora);
+    public  double getCosteConsumo(int horas, double costeHora) {
+        return horas*costeHora;
+    }
 
-    public Electrodomesticos(String marca, float potencia) {
+    public Electrodomesticos(String marca, int potencia) {
         this.marca = marca;
         this.potencia = potencia;
     }
@@ -47,11 +49,11 @@ public abstract class Electrodomesticos {
         this.marca = marca;
     }
 
-    public float getPotencia() {
+    public int getPotencia() {
         return potencia;
     }
 
-    public void setPotencia(float potencia) {
+    public void setPotencia(int potencia) {
         this.potencia = potencia;
     }
 }

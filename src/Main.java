@@ -4,7 +4,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int opcion = -1;
         try {
-
+            Lavadora lavadora1 = new Lavadora("sssss", 125);
             do {
                 System.out.println("MENU DE OPCIONES:" +
                         "\n1.- Reservar Habitacion" +
